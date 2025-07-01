@@ -10,8 +10,8 @@ module.exports = {
 			name: "@electron-forge/publisher-github",
 			config: {
 				repository: {
-					owner: "github-user-name",
-					name: "github-repo-name",
+					owner: "nhathuynh04work",
+					name: "my-electron-app",
 				},
 				prerelease: false,
 				draft: true,
