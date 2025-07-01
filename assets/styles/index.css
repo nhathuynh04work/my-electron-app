@@ -1,0 +1,61 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 300px;
+}
+
+.menu button {
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.menu button:hover {
+	background-color: aquamarine;
+}
+
+/* Overlay backdrop */
+.overlay {
+	display: none;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+	z-index: 999;
+}
+
+.modal {
+	display: none;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000; /* Make sure it's above the overlay */
+
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+	width: 400px; /* or any desired size */
+	max-width: 90vw;
+}
+
+.modal header {
+	padding: 2rem;
+}

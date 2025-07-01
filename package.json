@@ -22,7 +22,8 @@
 		"@electron-forge/plugin-fuses": "^7.8.1",
 		"@electron-forge/publisher-github": "^7.8.1",
 		"@electron/fuses": "^1.8.0",
-		"electron": "^37.1.0"
+		"electron": "^37.1.0",
+		"electron-reload": "^2.0.0-alpha.1"
 	},
 	"dependencies": {
 		"electron-squirrel-startup": "^1.0.1",
