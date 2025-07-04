@@ -1,16 +1,25 @@
+import path from "path";
+import { fileURLToPath } from "url";
+import { createRequire } from "module";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Use createRequire to import CommonJS modules
+const require = createRequire(import.meta.url);
 require("electron-reload")(__dirname, {
-	electron: require(`${__dirname}/node_modules/electron`),
+	electron: require(path.join(__dirname, "node_modules", "electron")),
 });
 
-const { app, BrowserWindow, ipcMain } = require("electron/main");
-const path = require("node:path");
+import { app, BrowserWindow, ipcMain } from "electron/main";
+import { join } from "node:path";
 
 const createWindow = () => {
 	const win = new BrowserWindow({
 		width: 800,
 		height: 600,
 		webPreferences: {
-			preload: path.join(__dirname, "preload.js"),
+			preload: join(__dirname, "preload.js"),
 		},
 	});
 

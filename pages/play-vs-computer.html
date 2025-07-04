@@ -6,9 +6,66 @@
 		<title>Play with computer</title>
 		<link rel="stylesheet" href="../assets/styles/reset.css" />
 		<link rel="stylesheet" href="../assets/styles/styles.css" />
+		<link rel="stylesheet" href="../assets/styles/play-vs-computer.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 	</head>
 	<body>
 		<h1>Play with computer</h1>
-		<a href="../index.html">Home</a>
+
+		<!-- Return home button -->
+		<button id="btn-home">&larr;</button>
+
+		<!-- Overlay -->
+		<div id="overlay"></div>
+
+		<!-- Return home modal -->
+		<div class="modal" id="modal-return-home">
+			<header>
+				<h2>YOU WANT TO EXIT?</h2>
+				<button id="btn-exit">X</button>
+			</header>
+
+			<div class="body">
+				<p>Do you want to save the game before quitting?</p>
+			</div>
+
+			<footer>
+				<button id="btn-exit-without-save">Exit without save</button>
+				<button id="btn-save-and-exit">Save & Exit</button>
+			</footer>
+		</div>
+
+		<!-- Notify winner modal -->
+		<div class="modal" id="modal-notify-winner">
+			<header>
+				<h2><span id="winner"></span> WON!</h2>
+			</header>
+
+			<div class="body"></div>
+
+			<footer>
+				<a href="../index.html">Home</a>
+			</footer>
+		</div>
+
+		<!-- Player representation -->
+		<div class="player" id="player">Player</div>
+		<div class="player" id="computer">Computer</div>
+
+		<!-- Game canvas -->
+		<div class="container" id="game-canvas"></div>
+
+		<!-- Remove button -->
+		<button id="btn-remove">Remove Selected</button>
 	</body>
+
+	<script type="module" src="../assets/scripts/modal-exit.js"></script>
+	<script type="module" src="../assets/scripts/generate-game.js"></script>
+	<script
+		type="module"
+		src="../assets/scripts/play-vs-computer-game-logic.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </html>
